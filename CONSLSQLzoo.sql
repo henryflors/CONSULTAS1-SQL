@@ -1,4 +1,21 @@
+---LISTADO DE 
+1.
+--The example uses a WHERE clause to show the population of 'France'. Note that strings should be in 'single quotes';
+--Modify it to show the population of Germany
+SELECT population FROM world
+  WHERE name = 'germany'
 
+  2.
+--Checking a list The word IN allows us to check if an item is in a list. The example shows the name and population for the countries 'Brazil', 'Russia', 'India' and 'China'.
+--Show the name and the population for 'Sweden', 'Norway' and 'Denmark'.
+SELECT name, population FROM world
+  WHERE name IN ('Sweden', 'Norway', 'Denmark');
+
+3.
+--Which countries are not too small and not too big? BETWEEN allows range checking (range specified is inclusive of boundary values).
+ --The example below shows countries with an area of 250,000-300,000 sq. km. Modify it to show the country and the area for countries with an area between 200,000 and 250,000.
+SELECT name, area FROM world
+  WHERE area BETWEEN 200000 AND 250000;
 
 --SELECT names
 --You can use WHERE name LIKE 'B%' to find the countries that start with "B".
@@ -68,8 +85,9 @@ SELECT name FROM world
 11.
 ---The capital of Luxembourg is Luxembourg. Show all the countries where the capital is the same as the name of the country
 --Find the country where the name is the capital city.
-SELECT name, capital, continent
+SELECT name
   FROM world
  WHERE name = capital;
+
 --ERROR
 
